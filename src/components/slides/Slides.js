@@ -1,12 +1,12 @@
 import Carousel from 'react-bootstrap/Carousel';
 
-function DarkVariantExample() {
+function Slides() {
   return (
     <Carousel variant="dark">
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="https://www.designbyday.co.uk/wp-content/uploads/2020/03/Placeholder-JPEG.jpg"
+          className="d-block w-100 pointer"
+          src="https://designshack.net/wp-content/uploads/img-placeholder.jpg"
           alt="First slide"
         />
         <Carousel.Caption>
@@ -16,8 +16,8 @@ function DarkVariantExample() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="https://th.bing.com/th/id/R.368537ab800464ee9b14d843e117ab01?rik=GZQ40m%2bZdW6sjQ&pid=ImgRaw&r=0"
+          className="d-block h-50 w-100 pointer"
+          src="https://designshack.net/wp-content/uploads/img-placeholder.jpg"
           alt="Second slide"
         />
         <Carousel.Caption>
@@ -27,8 +27,8 @@ function DarkVariantExample() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="https://th.bing.com/th/id/R.983cc8a1aaa7c3fc210226934b3e22c2?rik=fVRa9xsbt1kLtw&pid=ImgRaw&r=0"
+          className="d-block h-50 w-100 pointer"
+          src="https://designshack.net/wp-content/uploads/img-placeholder.jpg"
           alt="Third slide"
         />
         <Carousel.Caption>
@@ -42,4 +42,4 @@ function DarkVariantExample() {
   );
 }
 
-export default DarkVariantExample;
+export default Slides;
