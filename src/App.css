@@ -1,3 +1,15 @@
 body{
+  background-color: #ffb700;
+}
+
+.dark-mode{
   background-color: #121212;
+}
+.dark-mode i{
+  color: rgb(255, 162, 0);
+  text-decoration: none;
+}
+
+.dark-mode i:hover{
+  color: #ff7300;
 }
