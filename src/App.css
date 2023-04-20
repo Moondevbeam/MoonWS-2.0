@@ -13,3 +13,11 @@ body{
 .dark-mode i:hover{
   color: #ff7300;
 }
+
+.dark-mode h1{
+  color:#ff7300;
+}
+
+.dark-mode h5{
+  color:#ff7300;
+}
