@@ -4,14 +4,17 @@ import pdf from '../Images/RESUME.pdf'
 
 const Cards = () => {
     return(
-<div class="card" style={{width:"18rem", marginLeft:10}}>
+      <div style={{padding:10}}>
+<div class="card" style={{width:"18rem",display:"flex", justifyContent:"flex-start"}}>
   <img src={Resume} class="card-img-top" alt="..."/>
-  <div className="card-body tc">
-    <h5 className="card-title">Resume</h5>
-    <p className="card-text">Do you want to hire me? Here's my resume</p>
-    <a href={pdf} download={pdf} class="btn btn-warning">Download</a>
-  </div>
-</div>
+  <div class="card-body">
+    <p class="card-text">Do you want to hire me? Check out my Resume</p>
+    <div className="tc">
+    <button type="button" class="btn btn-warning"><a className="qbz black" href={pdf} download={pdf}>Download</a></button>
+    </div>
+    </div>
+      </div>
+      </div>
     )
 }
 

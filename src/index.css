@@ -16,3 +16,13 @@ code {
   text-decoration: none;
   color:black
 }
+
+.qbz{
+  text-decoration: none;
+}
+
+@media (max-width: 767.98px) {
+  .card {
+    margin: auto;
+  }
+}
