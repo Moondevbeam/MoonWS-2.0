@@ -5,13 +5,29 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Stack from './pages/Stack';
 // eslint-disable-next-line
 import tachyons from 'tachyons';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element:<App/>,
+  },
+  {
+    path: "stack",
+    element:<Stack/>,
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

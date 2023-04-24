@@ -23,6 +23,6 @@ code {
 
 @media (max-width: 767.98px) {
   .card {
-    margin: auto;
+    margin: auto !important;
   }
 }
