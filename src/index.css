@@ -26,3 +26,9 @@ code {
     margin: auto !important;
   }
 }
+
+@media (max-width: 767.98px) {
+  .phone {
+    margin: auto !important;
+  }
+}
