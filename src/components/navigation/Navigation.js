@@ -29,7 +29,7 @@ const Navigation = () =>{
                 <div style={{display:"flex", justifyContent:"right"}}>
                     <p className="pointer pa3 f3"><a className="black" href="https://www.linkedin.com/in/moonbeam-dev/"><i class="bi bi-linkedin"></i></a></p>
                     <p className="pointer pa3 f3"><a className="black" href="https://github.com/Moondevbeam"><i class="bi bi-github"></i></a></p>
-                    <p className="pointer pa3 f3"><Link className="black" to="/"><i class="bi bi-stack"></i></Link></p>
+                    <p className="pointer pa3 f3"><Link className="black" to="/"><i class="bi bi-house-heart-fill"></i></Link></p>
                     <p onClick={Darkmode} className="black pointer pa3 f3"><i class="bi bi-moon-stars-fill"></i></p>
                 </div>
             </div>
