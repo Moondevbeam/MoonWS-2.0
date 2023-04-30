@@ -7,9 +7,9 @@ class App extends Component{
   render(){
     return(
       <div className='App'>
+        <Darkmode/>
         <Navigation/>
         <Introduction/>
-        <Darkmode/>
       </div>
     )
   }
