@@ -1,22 +1,9 @@
+import React from "react";
 import Navigation from "../components/navigation/Navigation";
 import Resume from '../components/Images/RESUME.jpg'
 import pdf from '../components/Images/RESUME.pdf'
-import React, { Component } from "react";
 
-class Stack extends Component {
-  componentDidMount() {
-    window.addEventListener("beforeunload", this.onBeforeUnload);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("beforeunload", this.onBeforeUnload);
-  }
-
-  onBeforeUnload = () => {
-    window.location.reload();
-  };
-
-  render() {
+const Stack = () => {
     return(
 <div>
     <Navigation></Navigation>
@@ -34,5 +21,5 @@ class Stack extends Component {
 </div>
     )
 }
-}
+
 export default Stack;
