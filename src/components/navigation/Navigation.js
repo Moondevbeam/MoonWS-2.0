@@ -9,6 +9,7 @@ const Navigation = () =>{
     if (location.pathname === '/') {
         return(
             <div className="pa3 sticky dt ph5-ns black">
+                            <Darkmode/>
                 <Link to="/" className="dtc v-mid link w-25">
                     <img src={logo} className="dib br-100" alt="" style={{width:48,height:48}}></img>
                 </Link>
@@ -23,6 +24,7 @@ const Navigation = () =>{
       } else if (location.pathname === '/stack') {
         return(
             <div className="pa3 sticky dt ph5-ns black">
+                            <Darkmode/>
                 <Link to="/" className="dtc v-mid link w-25">
                     <img src={logo} className="dib br-100" alt="" style={{width:48,height:48}}></img>
                 </Link>
