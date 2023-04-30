@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import './App.css';
+// eslint-disable-next-line
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 import Introduction from './pages/Introduction';
 import Stack from './pages/Stack';
