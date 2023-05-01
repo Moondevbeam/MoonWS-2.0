@@ -10,7 +10,7 @@ const Introduction = () =>{
         My name is Matteo (Moonbeam on the web).
         I'm currently learning NodeJS, NextJS and React</h5>
     <h5>I am a Front End developer with a passion for building dynamic and responsive web applications. 
-        My goal is to become a full-stack developer, and I am dedicated to learning the necessary skills to achieve this dream.</h5>
+        My goal is to become a full-stack developer and I am dedicated to learning the necessary skills to achieve this dream.</h5>
     </div>
     </div>
     )
