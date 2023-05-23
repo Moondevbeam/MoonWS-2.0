@@ -3,7 +3,7 @@ import Navigation from "../components/navigation/Navigation";
 const Introduction = () =>{
     return(
         <div>
-            <Navigation></Navigation>
+            <Navigation/>
         <div className="phone sticky code black" style={{paddingLeft:10}}>
             <h1>Hello there! 👋🏻</h1>
             <h5>

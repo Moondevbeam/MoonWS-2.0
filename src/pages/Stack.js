@@ -1,32 +1,56 @@
-import React from "react";
-import Navigation from "../components/navigation/Navigation";
-import Resume from '../components/Images/RESUME.jpg'
-import pdf from '../components/Images/RESUME.pdf'
+import React, { useState } from "react";
+import Card from "../components/card/Card";
+import Navigation from '../components/navigation/Navigation'
+import CardDetail from "../components/card/CardDetail";
+import WebDev from "./WebDev";
+import ResumeImg from '../components/Images/ResumeImg.jpg';
+import code from '../components/Images/code.png'
+import MoonWSPage from "./MoonWSPage";
 
 const Stack = () => {
-  return (
-    <div>
-        <Navigation></Navigation>
-        {/* start card container */}
-        <div className="flex items-center">
-            {/* //start card */}
-            <div className="card out phone mr3" style={{width:"18rem"}}>
-                <img src={Resume} class="card-img-top" alt="..."/>
-                <div class="card-body">
-                    <p class="card-text">Do you want to hire me? Check out my Resume</p>
-                    <div className="tc">
-                        <button type="button" class="btn btn-warning">
-                            <a className="qbz black" href={pdf} download={pdf}>Download</a>
-                        </button>
-                    </div>
-                </div>
+    const [activeCard, setActiveCard] = useState(null);
+  
+    const cards = [
+      { imgSrc: ResumeImg, title: <WebDev/>, cardTitle:"Resume"},
+      { imgSrc: code, title: <MoonWSPage/>, cardTitle:"This Website!" },
+      // Aggiungi altri dati delle carte se necessario
+    ];
+  
+    const handleCardOpen = (card) => {
+      setActiveCard(card);
+    };
+  
+    const handleCardClose = () => {
+      setActiveCard(null);
+    };
+
+    return (
+        <div>
+          <Navigation />
+          {activeCard ? (
+            <CardDetail
+              imgSrc={activeCard.imgSrc}
+              title={activeCard.title}
+              onClose={handleCardClose}
+            >
+              {/* Contenuto specifico del CardDetail */}
+              {/* Aggiungi qui il contenuto aggiuntivo */}
+            </CardDetail>
+          ) : (
+            <div className="flex flex-wrap">
+              {cards.map((card, index) => (
+                <Card
+                  key={index}
+                  imgSrc={card.imgSrc}
+                  title={card.title}
+                  cardTitle={card.cardTitle}
+                  onOpen={() => handleCardOpen(card)}
+                />
+              ))}
             </div>
-            {/* // end card */}
-            {/* Add more cards here */}
+          )}
         </div>
-        {/* end card container */}
-    </div>
-)
-}
+      );
+    };
 
 export default Stack;
