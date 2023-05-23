@@ -5,7 +5,9 @@ import CardDetail from "../components/card/CardDetail";
 import WebDev from "./WebDev";
 import ResumeImg from '../components/Images/ResumeImg.jpg';
 import code from '../components/Images/code.png'
+import code1 from '../components/Images/code1.png'
 import MoonWSPage from "./MoonWSPage";
+import MoonProject from "./MoonProject";
 
 const Stack = () => {
     const [activeCard, setActiveCard] = useState(null);
@@ -13,6 +15,7 @@ const Stack = () => {
     const cards = [
       { imgSrc: ResumeImg, title: <WebDev/>, cardTitle:"Resume"},
       { imgSrc: code, title: <MoonWSPage/>, cardTitle:"This Website!" },
+      { imgSrc: code1, title: <MoonProject/>, cardTitle:"MoonChallenge" },
       // Aggiungi altri dati delle carte se necessario
     ];
   
