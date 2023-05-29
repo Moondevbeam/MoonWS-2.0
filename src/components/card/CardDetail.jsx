@@ -16,10 +16,15 @@ const CardDetail = ({ imgSrc, title }) => {
     padding: 0,
   };
 
+  const handleBack = () => {
+    window.location.href = "/stack";
+  }
+
   return (
     <div className="flex flex-column items-start justify-start">
       <div style={backgroundImageStyle}></div>
       <div className="pa3">
+      <button className="btn btn-danger" onClick={handleBack}><i className="bi bi-arrow-left"></i></button>
         <h1>{title}</h1>
       </div>
     </div>
