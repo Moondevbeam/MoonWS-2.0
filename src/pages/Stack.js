@@ -10,6 +10,7 @@ import code2 from '../components/Images/code2.png'
 import MoonWSPage from "./MoonWSPage";
 import MoonProject from "./MoonProject";
 import MoonWeather from "./MoonWeather";
+import BottomNav from "../components/navigation/MobileNavBar";
 
 const Stack = () => {
     const [activeCard, setActiveCard] = useState(null);
@@ -31,7 +32,7 @@ const Stack = () => {
     };
 
     return (
-        <div>
+        <div className="bottom1">
           <Navigation />
           {activeCard ? (
             <CardDetail
@@ -55,6 +56,7 @@ const Stack = () => {
               ))}
             </div>
           )}
+          <BottomNav/>
         </div>
       );
     };

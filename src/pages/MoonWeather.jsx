@@ -2,7 +2,7 @@ import React from 'react';
 
 const MoonWeather = () => {
   return (
-    <div className='white code'>
+    <div className='white f3 code'>
       <h1>MoonWeather: An In-Progress Project</h1>
       <ul>
         <li>

@@ -1,11 +1,11 @@
 import React from "react";
 import Navigation from "../components/navigation/Navigation";
-
+import BottomNav from "../components/navigation/MobileNavBar";
 const Introduction = () =>{
     return(
         <div>
             <Navigation/>
-            <div className="phone sticky code orange" style={{paddingLeft:10}}>
+            <div className="phone sticky code orange bottom" style={{paddingLeft:10}}>
                 <h1>Hello there! 👋🏻</h1>
                 <h5>
                     <span className="white">My name is Matteo (Moonbeam on the web).</span><br/>
@@ -18,6 +18,7 @@ const Introduction = () =>{
                     <span className="orange">Feel free to explore my portfolio, and I look forward to bringing your web project ideas to life!</span><br/>
                 </h5>
             </div>
+            <BottomNav/>
         </div>
     )
 }
