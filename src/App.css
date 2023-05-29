@@ -49,14 +49,28 @@ i:hover{
 }
 
 .nav-item {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
+  padding: 10px;
+  font-size: 14px;
+  /* Imposta le dimensioni fisse per i tasti */
+  width: 80px;
+  height: 40px;
 }
 
 @media (max-width: 768px) {
   .navbar {
     display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar {
+    display: flex;    
   }
 }
 
