@@ -34,7 +34,8 @@ const MoonProject = () => {
                     <h5>Instructions: The app can be run using various npm commands (`npm start` for development mode, `npm test` to launch the test runner, and `npm run build` to bundle and optimize the app for production). It's accessible at http://localhost:3000 for local development, reloading automatically upon code changes.</h5>
                 </li>
                 <div className="mt-4">
-                    <a href='https://github.com/Moondevbeam/Moonchallenge' className="btn btn-danger">Source Code</a>
+                    <a href='https://github.com/Moondevbeam/Moonchallenge' className="btn btn-danger ma2">Source Code</a>
+                    <a href='https://moonchallenge.vercel.app/' className="btn btn-danger">Try It</a>
                 </div>
             </ul>
         </div>

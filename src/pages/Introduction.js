@@ -15,7 +15,7 @@ const Introduction = () =>{
                     <span className="white">Aspiring to become a full-stack developer, I'm committed to learning and evolving in this journey.</span><br/>
                     <span className="orange">Feedback is a crucial part of my growth, helping me continually refine and enhance the user experience in my projects.</span><br/>
                     <span className="white">My work, characterized by responsive design and efficient performance, is powered by robust tools like React and Next.js.</span><br/>
-                    <span className="orange">Feel free to explore my portfolio, and I look forward to bringing your web project ideas to life!</span>
+                    <span className="orange">Feel free to explore my portfolio, and I look forward to bringing your web project ideas to life!</span><br/>
                 </h5>
             </div>
         </div>
