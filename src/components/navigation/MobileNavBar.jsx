@@ -8,15 +8,15 @@ const BottomNav = () => {
         <div className="navbar code border border-primary">
           {!showContacts ? (
         <>
-        <Link to="/" className="nav-item btn btn-primary white tc">Home</Link>
-        <Link to="/stack" className="nav-item btn btn-primary white tc">Projects</Link>
-        <button onClick={() => setShowContacts(true)} className="nav-item btn btn-primary white tc">Contacts</button>
+        <Link to="/" className="nav-item btn btn-primary white">Home</Link>
+        <Link to="/stack" className="nav-item btn btn-primary white">Projects</Link>
+        <button onClick={() => setShowContacts(true)} className="nav-item btn btn-primary white">Contacts</button>
       </>
           ) : (
             <>
-              <a href="https://github.com/Moondevbeam" className="nav-item btn btn-primary white tc">Github</a>
-              <a href="https://www.linkedin.com/in/moonbeam-dev/" className="nav-item btn btn-primary white tc">Linkedin</a>
-              <button onClick={() => setShowContacts(false)} className="nav-item btn btn-primary white tc">Back</button>
+              <a href="https://github.com/Moondevbeam" className="nav-item btn btn-primary white">Github</a>
+              <a href="https://www.linkedin.com/in/moonbeam-dev/" className="nav-item btn btn-primary white">Linkedin</a>
+              <button onClick={() => setShowContacts(false)} className="nav-item btn btn-primary white">Back</button>
             </>
           )}
         </div>
