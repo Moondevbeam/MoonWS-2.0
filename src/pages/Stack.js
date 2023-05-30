@@ -32,7 +32,7 @@ const Stack = () => {
     };
 
     return (
-        <div className="bottom1">
+        <div className="bottom">
           <Navigation />
           {activeCard ? (
             <CardDetail
