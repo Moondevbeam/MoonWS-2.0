@@ -12,7 +12,7 @@ import MoonProject from "./MoonProject";
 import MoonWeather from "./MoonWeather";
 import BottomNav from "../components/navigation/MobileNavBar";
 
-const Stack = () => {
+const Projects = () => {
     const [activeCard, setActiveCard] = useState(null);
   
     const cards = [
@@ -61,4 +61,4 @@ const Stack = () => {
       );
     };
 
-export default Stack;
+export default Projects;

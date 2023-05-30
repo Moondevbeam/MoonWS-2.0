@@ -9,7 +9,7 @@ const BottomNav = () => {
           {!showContacts ? (
         <>
         <Link to="/" className="nav-item btn btn-primary white">Home</Link>
-        <Link to="/stack" className="nav-item btn btn-primary white">Projects</Link>
+        <Link to="/projects" className="nav-item btn btn-primary white">Projects</Link>
         <button onClick={() => setShowContacts(true)} className="nav-item btn btn-primary white">Contacts</button>
       </>
           ) : (

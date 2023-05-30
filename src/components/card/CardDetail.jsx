@@ -17,7 +17,7 @@ const CardDetail = ({ imgSrc, title }) => {
   };
 
   const handleBack = () => {
-    window.location.href = "/stack";
+    window.location.href = "/projects";
   }
 
   return (

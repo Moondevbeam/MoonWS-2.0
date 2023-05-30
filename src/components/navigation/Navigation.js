@@ -4,37 +4,42 @@ import Darkmode from "../darkmode/Darkmode";
 import "./Navigation.css";
 import { Link, useLocation } from "react-router-dom";
 
-const Navigation = () =>{
-    const location = useLocation();
-    if (location.pathname === '/') {
-        return(
-            <div className="pa3 sticky dt ph5-ns black">
-                <Link to="/" className="dtc v-mid link w-25">
-                    <img src={logo} className="dib br-100" alt="" style={{width:48,height:48}}></img>
-                </Link>
-                <div style={{display:"flex", justifyContent:"right"}}>
-                    <p className="pointer pa3 f3"><a className="black" href="https://www.linkedin.com/in/moonbeam-dev/"><i class="bi bi-linkedin"></i></a></p>
-                    <p className="pointer pa3 f3"><a className="black" href="https://github.com/Moondevbeam"><i class="bi bi-github"></i></a></p>
-                    <p className="pointer pa3 f3"><Link className="black" to="stack"><i class="bi bi-file-earmark-code"></i></Link></p>
-                    <p onClick={Darkmode} className="black pointer pa3 f3"><i class="bi bi-moon-stars-fill"></i></p>
-                </div>
-            </div>
-        )
-      } else if (location.pathname === '/stack') {
-        return(
-            <div className="pa3 sticky dt ph5-ns black">
-                <Link to="/" className="dtc v-mid link w-25">
-                    <img src={logo} className="dib br-100" alt="" style={{width:48,height:48}}></img>
-                </Link>
-                <div style={{display:"flex", justifyContent:"right"}}>
-                    <p className="pointer pa3 f3"><a className="black" href="https://www.linkedin.com/in/moonbeam-dev/"><i class="bi bi-linkedin"></i></a></p>
-                    <p className="pointer pa3 f3"><a className="black" href="https://github.com/Moondevbeam"><i class="bi bi-github"></i></a></p>
-                    <p className="pointer pa3 f3"><Link className="black" to="/"><i class="bi bi-house-heart-fill"></i></Link></p>
-                    <p onClick={Darkmode} className="black pointer pa3 f3"><i class="bi bi-moon-stars-fill"></i></p>
-                </div>
-            </div>
-        )
-      }
+const MenuLink = ({ to, iconClass, external, children }) => {
+    if (external) {
+      return (
+        <a className="pointer pa3 f3 black" href={to}><i class={iconClass}></i></a>
+      );
+    } else {
+      return (
+        <Link className="pointer pa3 f3 black" to={to}><i class={iconClass}></i></Link>
+      );
     }
-
-export default Navigation;
+  }
+  
+  const Navigation = () => {
+    const location = useLocation();
+    const commonLinks = [
+      { to: "https://www.linkedin.com/in/moonbeam-dev/", iconClass: "bi bi-linkedin", external: true },
+      { to: "https://github.com/Moondevbeam", iconClass: "bi bi-github", external: true },
+      { to: location.pathname === '/' ? "/projects" : "/", iconClass: location.pathname === '/' ? "bi bi-file-earmark-code" : "bi bi-house-heart-fill", external: false }
+    ];
+  
+    return (
+      <div className="pa3 sticky dt ph5-ns black">
+        <Link to="/" className="dtc v-mid link w-25">
+          <img src={logo} className="dib br-100" alt="Logo" style={{ width: 48, height: 48 }} />
+        </Link>
+        <div style={{ display: "flex", justifyContent: "right" }}>
+          {commonLinks.map((link, index) => (
+            <MenuLink key={index} {...link} />
+          ))}
+          <button onClick={Darkmode} className="pointer pa3 f3 black" style={{ background: 'transparent', border: 'none' }}>
+            <i class="bi bi-moon-stars-fill"></i>
+          </button>
+        </div>
+      </div>
+    )
+  }
+  
+  export default Navigation;
+  
