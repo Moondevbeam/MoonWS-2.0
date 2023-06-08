@@ -44,7 +44,7 @@ const Navigation = () => {
           <MenuLink key={index} {...link} />
         ))}
         <Link to="/" className="dtc v-mid link w-25" style={{ paddingLeft: '20px' }}>
-          <img src={logo} className="dib br-100" alt="Logo" style={{ width: 100 }} />
+          <img src={logo} className="dib br-100" alt="Logo" style={{ width: 100, height:38 }} />
         </Link>
       </div>
     </div>
