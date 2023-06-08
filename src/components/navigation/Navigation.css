@@ -12,3 +12,8 @@ color: blue;
     position: relative;
     margin-left: 10px;
 }
+
+.transparent-button {
+    background-color: transparent;
+    border: none;
+  }

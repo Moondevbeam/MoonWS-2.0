@@ -1,8 +1,8 @@
 import React from "react";
-import logo from '../Images/logo.png'
+import { Link, useLocation } from "react-router-dom";
+import logo from '../Images/logo.png';
 import Darkmode from "../darkmode/Darkmode";
 import "./Navigation.css";
-import { Link, useLocation } from "react-router-dom";
 
 const MenuLink = ({ to, iconClass, external, onClick, children }) => {
   if (external) {
@@ -11,21 +11,25 @@ const MenuLink = ({ to, iconClass, external, onClick, children }) => {
     );
   } else {
     return (
-      <Link className="pointer pa3 f3 black" to={to} onClick={onClick}><i className={iconClass}></i></Link>
+      <button className="pointer pa3 f3 black transparent-button" onClick={onClick}>
+        <Link to={to}>
+          <i className={iconClass}></i>
+        </Link>
+      </button>
     );
   }
-}
+};
 
 const Navigation = () => {
   const location = useLocation();
   const commonLinks = [
-    { to: "https://www.linkedin.com/in/moonbeam-dev/", iconClass: "bi bi-linkedin", external: true },
-    { to: "https://github.com/Moondevbeam", iconClass: "bi bi-github", external: true },
+    { to: "https://www.linkedin.com/in/moonbeam-dev/", iconClass: "bi bi-linkedin", external: true, ariaLabel: "LinkedIn" },
+    { to: "https://github.com/Moondevbeam", iconClass: "bi bi-github", external: true, ariaLabel: "GitHub" },
   ];
 
   const homeAndProjectsLinks = [
-    { to: location.pathname === '/' ? "/projects" : "/", iconClass: location.pathname === '/' ? "bi bi-file-earmark-code" : "bi bi-house-heart-fill", external: false },
-    { to: "#", iconClass: "bi bi-moon-stars-fill", external: false, onClick: Darkmode }
+    { to: location.pathname === '/' ? "/projects" : "/", iconClass: location.pathname === '/' ? "bi bi-file-earmark-code" : "bi bi-house-heart-fill", external: false, ariaLabel: "Home" },
+    { to: "#", iconClass: "bi bi-moon-stars-fill", external: false, onClick: Darkmode, ariaLabel: "Toggle Dark Mode" }
   ];
 
   return (
@@ -44,7 +48,7 @@ const Navigation = () => {
         </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Navigation;
