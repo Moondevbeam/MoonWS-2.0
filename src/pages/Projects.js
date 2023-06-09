@@ -7,10 +7,12 @@ import ResumeImg from '../components/Images/ResumeImg.jpg';
 import code from '../components/Images/code.png'
 import code1 from '../components/Images/code1.png'
 import code2 from '../components/Images/code2.png'
+import code3 from '../components/Images/code3.png'
 import MoonWSPage from "./MoonWSPage";
 import MoonProject from "./MoonProject";
 import MoonWeather from "./MoonWeather";
 import BottomNav from "../components/navigation/MobileNavBar";
+import MoonAnimeList from "./MoonAnimeList";
 
 const Projects = () => {
     const [activeCard, setActiveCard] = useState(null);
@@ -20,6 +22,7 @@ const Projects = () => {
       { imgSrc: code, title: <MoonWSPage/>, cardTitle:"This Website!" },
       { imgSrc: code1, title: <MoonProject/>, cardTitle:"MoonChallenge" },
       { imgSrc: code2, title: <MoonWeather/>, cardTitle:"MoonWeather" },
+      { imgSrc: code3, title: <MoonAnimeList/>, cardTitle:"MoonAnimeList" },
       // Aggiungi altri dati delle carte se necessario
     ];
   

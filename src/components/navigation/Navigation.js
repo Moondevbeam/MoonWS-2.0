@@ -28,7 +28,7 @@ const Navigation = () => {
   ];
 
   const homeAndProjectsLinks = [
-    { to: location.pathname === '/' ? "/projects" : "/", iconClass: location.pathname === '/' ? "bi bi-file-earmark-code" : "bi bi-house-heart-fill", external: false, ariaLabel: "Home" },
+    { to: location.pathname === '/' ? "/projects" : "/", iconClass: location.pathname === '/' ? "bi bi-file-earmark-code" : "bi bi-house-heart-fill", external: false, ariaLabel: "Home"},
     { to: "#", iconClass: "bi bi-moon-stars-fill", external: false, onClick: Darkmode, ariaLabel: "Toggle Dark Mode" }
   ];
 
