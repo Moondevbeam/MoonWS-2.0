@@ -12,10 +12,9 @@ The website has a fresh, contemporary design aimed at enhancing user interaction
 
 ## Technologies Used
 
-- React (including Statehooks)
+- React
 - React-router-dom
-- Bootstrap
-- Tachyons
+- Tailwind
 - CSS
 - HTML
 
