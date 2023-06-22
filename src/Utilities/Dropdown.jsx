@@ -12,11 +12,18 @@ export default function Dropdown() {
     <Menu as="div" className="relative inline-block text-left mt-1">
       <div>
         <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 px-3 py-2 text-sm font-semibold">
-        <svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0.700073" y="0.5" width="26" height="4" rx="2" fill="#2B50B0"/>
-        <rect x="12.2556" y="9.5" width="14.4444" height="4" rx="2" fill="#2B50B0"/>
-        <rect x="0.700073" y="18.5" width="26" height="4" rx="2" fill="#2B50B0"/>
-        </svg>
+        <svg width="27" height="23" viewBox="0 0 27 23" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="27" y2="23">
+      <stop offset="0.14" stop-color="#532FA1"/>
+      <stop offset="0.43" stop-color="#760979"/>
+      <stop offset="0.88" stop-color="#FFA600"/>
+    </linearGradient>
+  </defs>
+  <rect x="0.700073" y="0.5" width="26" height="4" rx="2" fill="url(#grad)"/>
+  <rect x="12.2556" y="9.5" width="14.4444" height="4" rx="2" fill="url(#grad)"/>
+  <rect x="0.700073" y="18.5" width="26" height="4" rx="2" fill="url(#grad)"/>
+</svg>
           <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
         </Menu.Button>
       </div>
