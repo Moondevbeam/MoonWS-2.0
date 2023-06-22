@@ -1,3 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Nunito;
+  src: url(./assets/fonts/Nunito-Regular.ttf),
+  url(./assets/fonts/Nunito-Bold.ttf);
+  }
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -12,24 +21,13 @@ code {
     monospace;
 }
 
-.card-text:hover{
-  text-decoration: none;
-  color:black
-}
-
-.qbz{
-  text-decoration: none;
-}
-
-@media (max-width: 767.98px) {
-  .card {
-    margin: auto !important;
+@media (max-width: 768px){
+  .mobile{
+    padding-top: 150%;
   }
 }
 
-@media (max-width: 767.98px) {
-  .phone {
-    margin: auto !important;
-    margin-top: 10px !important;
-  } 
+.dark {
+  background-color: #1f2937;
+  color: #f3f4f6;
 }
