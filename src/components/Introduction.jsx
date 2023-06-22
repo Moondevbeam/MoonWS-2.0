@@ -33,13 +33,13 @@ function Introduction() {
               <div className="border-t border-[#5A5A5A] mx-auto mb-2"></div>
               <button
                 className="bg-[#FFFFFF] border border-[#112340] text-[#112340] font-extrabold px-6 py-2 mt-6 rounded-lg"
-              >
-                Click here to view my projects!
+              ><a href="/Projects"aria-label='btn-project'>Click here to view my projects!</a>
               </button>
               <p className="text-[#FFFFFF] text-xs mt-4 mb-6">
               For business <br />{" "}
                 <a
-                  href="https://www.example.com"
+                  href="https://drive.google.com/file/d/1kjoIF_typkchQqDANVa0UCvz8IZgHTGS/view?usp=sharing"
+                  aria-label='Download Link'
                   target="_blank"
                   rel="noreferrer"
                   className="underline text-[#0062ff]"
