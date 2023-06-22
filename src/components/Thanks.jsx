@@ -1,12 +1,12 @@
 import React from 'react';
-import NewsletterBack from '../assets/images/circle-blues.png';
+import ThanksBG from '../assets/images/circle-blues.png';
 
-const Newsletter = () => {
+const Thanks = () => {
   return (
     <div
       className="flex flex-col justify-center items-center bg-cover bg-center h-128 sm:h-128 mx-auto sm:py-8"
       style={{
-        backgroundImage: `url(${NewsletterBack})`,
+        backgroundImage: `url(${ThanksBG})`,
         backgroundSize: 'cover',
       }}
     >
@@ -21,4 +21,4 @@ const Newsletter = () => {
   );
 };
 
-export default Newsletter;
+export default Thanks;

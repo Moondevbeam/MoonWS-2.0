@@ -30,19 +30,19 @@ const Footer = () => {
             <h2 className="text-lg font-semibold">Download</h2>
             <ul className="mt-2 space-x-2 text-[#898989]">
               <li className='flex text-center'>
-                <a href="https://drive.google.com/file/d/1kjoIF_typkchQqDANVa0UCvz8IZgHTGS/view?usp=sharing" aria-label='Download'>CV</a>CV</li>
+                <a href="https://drive.google.com/file/d/1kjoIF_typkchQqDANVa0UCvz8IZgHTGS/view?usp=sharing" aria-label='Download'>CV</a></li>
             </ul>
           </div>
           <div className="border-l-2 border-[#5A5A5A] hidden md:block"></div>
           <div className="mb-4">
-            <h2 className="text-lg font-semibold text-[#A9A5DF]"><a href="https://github.com/Moondevbeam/MoonWS-2.0" aria-label='Github Repo'>Source Code</a>Source Code</h2>
+            <h2 className="text-lg font-semibold text-[#A9A5DF]"><a href="https://github.com/Moondevbeam/MoonWS-2.0" aria-label='Github Repo'>Source Code</a></h2>
             <h2 className="text-lg font-semibold mt-1 text-[#A7AEBE]"><a href="https://www.instagram.com/moondevbeam/" aria-label='Instagram Profile'>Follow me on Instagram!</a></h2>
           </div>
         </div>
             <div className="border-t-2 mx-auto border-[#5A5A5A] mt-6 pt-4">
             <ul className="justify-between text-[#898989] md:flex">
               <li>Moonbeam</li>
-              <li>Privacy e Cookie Policy</li>
+              <li>Website made with love</li>
               <li className='md:hidden'>Coded by Moonbeam ❤️</li>
             </ul>
           </div>

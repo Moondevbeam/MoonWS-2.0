@@ -2,14 +2,14 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import CardSlider from '../components/CardSlider'
 import Footer from '../components/Footer'
-import Newsletter from '../components/Newsletter'
+import Thanks from '../components/Thanks'
 
 function Projects() {
   return (
     <div>
         <Navbar/>
         <CardSlider/>
-        <Newsletter/>
+        <Thanks/>
         <Footer/>
     </div>
   )

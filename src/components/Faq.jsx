@@ -24,10 +24,6 @@ const Faq = () => {
       question: 'Icons Provided by:',
       answer:'Devicons.dev',
     },
-    {
-      question: 'Example',
-      answer: 'Lorem Ipsum',
-    },
   ];
 
   const toggleAccordion = (index) => {
@@ -39,7 +35,7 @@ const Faq = () => {
       <h1 className="text-3xl text-center font-bold mb-4">FAQ</h1>
       <div className="space-y-4 text-sm md:text-lg">
         {faqs.map((faq, index) => (
-          <div key={index} className="border-t border-gray-200 rounded p-4">
+          <div key={index} className="border-t border-gray-200 p-6">
             <button
               className="flex items-center justify-between w-full focus:outline-none"
               onClick={() => toggleAccordion(index)}
