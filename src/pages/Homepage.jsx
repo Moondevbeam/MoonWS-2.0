@@ -9,7 +9,7 @@ import Thanks from '../components/Thanks'
 
 function Homepage() {
   return (
-    <div style={{fontFamily:"Nunito"}}>
+    <div>
         <Navbar/>
         <Introduction/>
         <TechStack/>

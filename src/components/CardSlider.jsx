@@ -50,7 +50,7 @@ const CardSlider = () => {
             className={`rounded-xl shadow-lg ${card.backgroundColor}`}
           >
             <div>
-              <img src={card.image} alt={card.title} className="w-72 h-auto object-cover rounded-lg rounded-b-none" />
+              <img src={card.image} alt={card.title} className="w-80 h-auto object-cover rounded-lg rounded-b-none" />
             </div>
             <div className="py-4 px-4">
               <div className="font-bold text-xl mb-2">{card.title}</div>
