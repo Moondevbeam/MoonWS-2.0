@@ -2,7 +2,7 @@ import React from 'react';
 
 const TechTalk = () => {
   return (
-    <div className="mx-4 mb-8 max-w-prose sm:rounded-lg">
+    <div className="mx-4 mb-8 sm:rounded-lg">
       <div className="px-4 py-5 sm:px-6">
         <h1 className="text-2xl sm:text-3xl leading-9 font-bold">Introducing Myself: Matthew</h1>
         <p className="mt-1 max-w-2xl text-sm leading-5 text-gray-500">
