@@ -12,7 +12,6 @@ const Navbar = () => {
       </div>
       <div className="hidden md:flex justify-end text-[#8000ff] font-extrabold text-lg">
         <a href="/" aria-label='Home' className="px-4 py-2 hover:text-blue-700">Home</a>
-        <a href="/About" aria-label='About' className="px-4 py-2 hover:text-blue-700">About</a>
         <a href="/Projects" aria-label='Projects' className="px-4 py-2 hover:text-blue-700">Projects</a>
         <a href="/Blog" aria-label='Blog' className="px-4 py-2 hover:text-blue-700">Blog</a>
       </div>
