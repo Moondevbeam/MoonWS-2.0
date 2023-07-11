@@ -16,7 +16,7 @@ const Footer = () => {
             <h2 className="text-lg font-semibold">Quick Links</h2>
             <ul className="mt-2 flex flex-col space-y-2 text-[#898989]">
               <li><a href="https://www.linkedin.com/in/moonbeam-dev/" aria-label='Linkedin Profile'>LinkedIn</a></li>
-              <li><a href="Github" aria-label='Github Profile'>Github</a></li>
+              <li><a href="https://github.com/Moondevbeam" aria-label='Github Profile'>Github</a></li>
             </ul>
           </div>
           <div className="mb-4">
