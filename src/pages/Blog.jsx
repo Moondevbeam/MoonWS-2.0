@@ -1,18 +1,18 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import Thanks from '../components/Thanks'
-import TechTalk from '../components/TechTalk'
+import React from 'react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import Thanks from '../components/Thanks';
+import PublicPostList from '../components/PublicPostList'; // Import the component for listing public posts
 
 function Blog() {
   return (
     <div>
-        <Navbar/>
-        <TechTalk/>
-        <Thanks/>
-        <Footer/>
+      <Navbar />
+      <PublicPostList />
+      <Thanks />
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default Blog
+export default Blog;
