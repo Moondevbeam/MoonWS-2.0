@@ -34,7 +34,6 @@ const SignIn = () => {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            required
           />
         </div>
         <div className="mb-4">
@@ -47,7 +46,6 @@ const SignIn = () => {
             id="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
           />
         </div>
         <div className="mb-4 text-red-500">{errorMessage}</div>
