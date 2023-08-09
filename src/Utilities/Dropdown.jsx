@@ -1,13 +1,27 @@
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import {Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import firebase from '../api/FirebaseConfig';
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Dropdown() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleLogout = async () => {
+    try {
+      await firebase.auth().signOut();
+      navigate('/');
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <Menu as="div" className="relative inline-block text-left mt-1">
       <div>
@@ -80,6 +94,18 @@ export default function Dropdown() {
                 )}
               </Menu.Item>
             </form>
+            {location.pathname === '/admin' && (
+              <Menu.Item>
+                <button
+                  onClick={handleLogout}
+                  className={classNames(
+                    'block w-full px-4 py-2 text-left text-sm text-red-600 hover:bg-red-100 hover:text-red-800'
+                  )}
+                >
+                  Logout
+                </button>
+              </Menu.Item>
+            )}
           </div>
         </Menu.Items>
       </Transition>
