@@ -4,11 +4,11 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Contacts = () => {
   return (
-    <div className='mb-8'>
-      <h2 className="text-2xl font-bold mt-16 text-center md:block">
+    <div className='mb-8 -mt-24 md:-mt-0'>
+      <h2 className="text-2xl font-bold text-center md:block">
         Links and Contacts
       </h2>
-      <div className="mt-10 flex flex-col items-center md:flex-row md:justify-start">
+      <div className="mt-16 flex flex-col items-center md:flex-row md:justify-start">
         <div className="w-full flex flex-col items-center mb-16 md:mb-0 md:mr-8">
           <div className="flex-grow hover:scale-125 cursor-pointer">
             <a href="https://www.linkedin.com/in/moonbeam-dev/" aria-label='LinkedIn Account'>
@@ -17,7 +17,7 @@ const Contacts = () => {
             </a>
           </div>
         </div>
-        <div className="w-full flex flex-col items-center mb-16 md:mb-0 md:mr-8">
+        <div className="w-full flex flex-col items-center mb-4 md:mb-0 md:mr-8">
           <div className="flex-grow hover:scale-125 cursor-pointer">
             <a href="https://github.com/Moondevbeam" aria-label='Github Account'>
               <FontAwesomeIcon icon={faGithub} className="mb-2 mx-auto h-16 w-16 text-purple-700" />
