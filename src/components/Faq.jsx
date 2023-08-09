@@ -5,26 +5,31 @@ const Faq = () => {
 
   const faqs = [
     {
-      question: 'Who made this website',
-      answer: 'Me! Moonbeam',
+      question: 'What is the purpose of this website?',
+      answer: 'This website is my personal portfolio, created to showcase my skills and projects as a web developer.',
     },
     {
-      question: 'Who is Moonbeam',
-      answer: 'A young web developer, his real name is Matteo Aliotta',
+      question: 'Who is Moonbeam?',
+      answer: 'Moonbeam is my online nickname. My real name is Matteo Aliotta. I am a young web developer passionate about creating engaging digital experiences.',
     },
     {
-      question: 'Is this website made with love?',
-      answer: 'Yes. ❤️',
+      question: 'What technologies did you use to build this portfolio?',
+      answer: 'I developed this portfolio using React. I also leveraged Tailwind for design and Firebase for data management.',
     },
     {
-      question: 'What is this website?',
-      answer: 'This is a website made for showcasing my developer skills',
+      question: 'What can I find here?',
+      answer: 'Here, you will find a collection of my projects, including websites and applications crafted with care using the latest web development technologies.',
     },
     {
-      question: 'Icons Provided by:',
-      answer:'Devicons.dev',
+      question: 'What type of projects have you completed using React?',
+      answer: 'I have worked on a variety of projects using React, including interactive websites, and dynamic user interfaces.',
+    },
+    {
+      question: 'How can I get in touch with you for collaboration opportunities?',
+      answer: 'You can reach out to me through the contact details provided in the website\'s contact section. I will be happy to discuss collaboration opportunities or answer your questions.',
     },
   ];
+  
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);

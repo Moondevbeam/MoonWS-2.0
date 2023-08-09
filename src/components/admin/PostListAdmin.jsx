@@ -5,27 +5,24 @@ import PostItemAdmin from './PostItemAdmin';
 const PostListAdmin = () => {
   const [posts, setPosts] = useState([]);
 
-  const fetchPosts = async () => {
-    try {
-      const postsCollection = await firebase.firestore().collection('publicPosts').get();
-      const fetchedPosts = postsCollection.docs.map((doc) => ({
+  useEffect(() => {
+    const unsubscribe = firebase.firestore().collection('publicPosts').onSnapshot(snapshot => {
+      const fetchedPosts = snapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data(),
       }));
       setPosts(fetchedPosts);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+    });
 
-  useEffect(() => {
-    fetchPosts();
+    return () => {
+      unsubscribe();
+    };
   }, []);
 
   return (
     <div className='mx-4'>
       {posts.map((post) => (
-        <PostItemAdmin key={post.id} post={post} fetchPosts={fetchPosts} />
+        <PostItemAdmin key={post.id} post={post} />
       ))}
     </div>
   );

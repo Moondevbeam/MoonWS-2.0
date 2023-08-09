@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const Contacts = () => {
   return (
@@ -10,17 +12,17 @@ const Contacts = () => {
         <div className="w-full flex flex-col items-center mb-16 md:mb-0 md:mr-8">
           <div className="flex-grow hover:scale-125 cursor-pointer">
             <a href="https://www.linkedin.com/in/moonbeam-dev/" aria-label='LinkedIn Account'>
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" className="mb-2 mx-auto h-16 w-16"/>
-          <h3 className="text-sm text-center font-extrabold">LinkedIn</h3>
-          </a>
+              <FontAwesomeIcon icon={faLinkedin} className="mb-2 mx-auto h-16 w-16 text-blue-600" />
+              <h3 className="text-sm text-center font-extrabold">LinkedIn</h3>
+            </a>
           </div>
         </div>
         <div className="w-full flex flex-col items-center mb-16 md:mb-0 md:mr-8">
           <div className="flex-grow hover:scale-125 cursor-pointer">
             <a href="https://github.com/Moondevbeam" aria-label='Github Account'>
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="Github" className="mb-2 mx-auto h-16 w-16"/>
-          <h3 className="text-sm text-center font-extrabold">Github</h3>
-          </a>
+              <FontAwesomeIcon icon={faGithub} className="mb-2 mx-auto h-16 w-16 text-purple-700" />
+              <h3 className="text-sm text-center font-extrabold">GitHub</h3>
+            </a>
             <div className="flex items-center justify-center mt-4">
             </div>
           </div>

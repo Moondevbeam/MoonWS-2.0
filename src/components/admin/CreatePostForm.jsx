@@ -16,9 +16,8 @@ const CreatePostForm = ({ fetchPosts }) => {
           content: newContent,
           date: formattedDate,
         });
-        fetchPosts();
         setNewTitle('');
-        setNewContent('');
+        setNewContent(''); // Resetting the content to an empty string
       } catch (error) {
         console.error(error);
       }

@@ -8,7 +8,9 @@ const Footer = () => {
         <div className="grid gap-2 md:grid-cols-6 grid-cols-2">
           <div className="mb-4 flex flex-col items-center col-span-2 md:col-span-1 md:mr-auto">
           <img src={logo} alt="logo" className='w-12 h-12'/>
+          <Link to={'/login'} className='cursor-default'>
           <p className='mt-4 text-md text-extrabold text-[#8000ff]'>moonWS</p>
+          </Link>
             <div className="relative">
             </div>
           </div>
