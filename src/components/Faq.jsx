@@ -13,7 +13,7 @@ const Faq = () => {
       answer: 'Moonbeam is my online nickname. My real name is Matteo Aliotta. I am a young web developer passionate about creating engaging digital experiences.',
     },
     {
-      question: 'What technologies did you use to build this portfolio?',
+      question: 'About MoonWS',
       answer: 'I developed this portfolio using React. I also leveraged Tailwind for design and Firebase for data management.',
     },
     {
@@ -21,11 +21,11 @@ const Faq = () => {
       answer: 'Here, you will find a collection of my projects, including websites and applications crafted with care using the latest web development technologies.',
     },
     {
-      question: 'What type of projects have you completed using React?',
+      question: 'Other Projects',
       answer: 'I have worked on a variety of projects using React, including interactive websites, and dynamic user interfaces.',
     },
     {
-      question: 'How can I get in touch with you for collaboration opportunities?',
+      question: 'Want to get in touch?',
       answer: 'You can reach out to me through the contact details provided in the website\'s contact section. I will be happy to discuss collaboration opportunities or answer your questions.',
     },
   ];
