@@ -42,7 +42,7 @@ const Footer = () => {
             <div className="border-t-2 mx-auto border-[#5A5A5A] mt-6 pt-4">
             <ul className="justify-between text-[#898989] md:flex">
               <li>Moonbeam</li>
-              <li>Website made with love</li>
+              <li>Made with React</li>
               <li className='md:hidden'>Coded by Moonbeam ❤️</li>
             </ul>
           </div>
