@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import firebase from '../api/FirebaseConfig';
-import GitHubSignIn from '../components/admin/GithubSignIn';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -55,10 +54,8 @@ const SignIn = () => {
         >
           Sign In with Email and Password
         </button>
-        <div className='border border-t border-black w-full mb-2'></div>
-        <div className='text-center'>
-        <GitHubSignIn/>
-        </div>
+        <div className='border border-t border-black w-full mb-8'></div>
+        <Link className='text-center font-bold text-md' to={'/'}>Homepage</Link>
       </form>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import image1 from '../assets/images/andras-vas-Bd7gNnWJBkU-unsplash.jpg';
 import logo from '../assets/images/1682858017524.png'
-
+import { Link } from 'react-router-dom';
 function Introduction() {
   return (
     <div className='min-h-screen'>
@@ -24,7 +24,9 @@ function Introduction() {
             </div>
             <div className="md:mt-0 md:ml-20 md:w-1/2 bg-[#121212] bg-opacity-[0.4] rounded-lg border-2 border-black p-6 text-center">
             <div className="flex items-center justify-center">
+            <Link to={'/login'} className='cursor-default'>
                 <img className="w-24 h-24 mb-5" src={logo} alt="Propic" />
+                </Link>
               </div>
               <p className="text-[#FFFFFF] text-lg mb-5">Tech Enthusiast</p>
               <h1 className="mb-5 text-4xl md:text-4xl text-[#FFFFFF] font-bold">
