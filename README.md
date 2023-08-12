@@ -15,8 +15,7 @@ The website has a fresh, contemporary design aimed at enhancing user interaction
 - React
 - React-router-dom
 - Tailwind
-- CSS
-- HTML
+- Firebase (Auth, Firestore)
 
 ## Run Locally
 
