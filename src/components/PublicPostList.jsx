@@ -21,13 +21,17 @@ const PublicPostList = () => {
     fetchPublicPosts();
   }, []);
 
+  const style = {
+    whiteSpace: 'pre-line',
+  };
+
   return (
-    <div>
+    <div className='space-y-8 mb-8'>
       {publicPosts.map((post) => (
-        <div key={post.id} className="border border-gray-300 p-2 mb-2 rounded md:mx-16 mx-2 mb-32 mt-16">
-          <h3 className='text-center mt-4 mb-4 font-bold text-lg'>{post.title}</h3> {/* Display the title */}
-          <p className='px-2 mb-4'>{post.content}</p>
-          <p className="font-bold mx-2 text-sm mt-1">{post.date}</p> {/* Display the date */}
+        <div key={post.id} className="border border-purple-700 border-[2px] bg-black p-2 mb-2 rounded md:mx-16 mx-2 mt-16">
+          <h3 className='text-center text-purple-700 mt-4 mb-4 font-bold text-lg'>{post.title}</h3>
+          <p style={style} className='text-md px-2 mb-4 text-white font-bold'>{post.content}</p>
+          <p className="font-bold mx-2 text-sm text-right">{post.date}</p>
         </div>
       ))}
     </div>

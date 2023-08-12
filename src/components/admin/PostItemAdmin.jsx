@@ -15,7 +15,6 @@ const PostItemAdmin = ({ post, fetchPosts }) => {
         content: editedContent,
       });
       setIsEditing(false);
-      fetchPosts();
     } catch (error) {
       console.error(error);
     }
@@ -32,17 +31,18 @@ const PostItemAdmin = ({ post, fetchPosts }) => {
   };
 
   return (
-    <div className="border border-gray-300 p-2 mb-2 rounded">
+    <div>
+    <div className="border border-[3px] border-purple-700 text-purple-700 font-bold bg-black p-2 mb-2 rounded mx-4">
       {isEditing ? (
         <>
           <input
             type="text"
-            className="w-full px-2 py-1 border border-gray-300 rounded mb-2"
+            className="w-full px-2 py-1 border border-purple-700 bg-black rounded mb-2"
             value={editedTitle}
             onChange={(e) => setEditedTitle(e.target.value)}
           />
           <textarea
-            className="w-full px-2 py-1 border border-gray-300 rounded mb-2"
+            className="w-full px-2 py-1 border border-purple-700 h-64 bg-black rounded mb-2"
             value={editedContent}
             onChange={(e) => setEditedContent(e.target.value)}
           />
@@ -62,7 +62,7 @@ const PostItemAdmin = ({ post, fetchPosts }) => {
         </>
       ) : (
         <>
-          <h3>{post.title}</h3>
+          <h3 className='mb-4'>{post.title}</h3>
           <p>{post.content}</p>
           <button
             className="mt-2 bg-blue-500 text-white py-1 px-2 rounded hover:bg-blue-600 mr-2"
@@ -78,6 +78,8 @@ const PostItemAdmin = ({ post, fetchPosts }) => {
           </button>
         </>
       )}
+    </div>
+    <p className='text-right mx-4 text-purple-700 font-bold'>{post.date}</p>
     </div>
   );
 };

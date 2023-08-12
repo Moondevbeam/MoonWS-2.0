@@ -20,7 +20,7 @@ const PostListAdmin = () => {
   }, []);
 
   return (
-    <div className='mx-4'>
+    <div className='mx-4 space-y-4'>
       {posts.map((post) => (
         <PostItemAdmin key={post.id} post={post} />
       ))}

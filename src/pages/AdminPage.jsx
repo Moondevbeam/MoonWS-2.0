@@ -35,7 +35,7 @@ const AdminPage = () => {
     <div>
       <Navbar />
       <CreatePostForm />
-      <h3 className='mx-4 mb-8 text-center font-bold text-xl'>Manage Posts</h3>
+      <div className='mt-16'></div>
       <PostListAdmin />
     </div>
   );
