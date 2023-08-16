@@ -39,11 +39,11 @@ const ProjectId = () => {
               <div className="w-1/2 pr-2">
                 <img src={projectData.smallimgURL} alt={projectData.title} className="w-full h-auto object-cover rounded cursor-pointer" />
               </div>
-              <p className="w-1/2 p-2 rounded text-gray-500">{projectData.description}</p>
+              <p className="w-1/2 p-2 rounded text-gray-500 whitespace-pre-line">{projectData.description}</p>
             </div>
             <div className='border border-t border-[2px] my-8'></div>
             <div className="flex">
-              <p className="w-1/2 p-2 rounded text-gray-500">{projectData.extraDescription}</p>
+              <p className="w-1/2 p-2 rounded text-gray-500 whitespace-pre-line">{projectData.extraDescription}</p>
               <div className="w-1/2 pr-2">
                 <img src={projectData.extraSmallimgURL} alt={projectData.title} className="w-full h-auto object-cover rounded cursor-pointer" />
               </div>
