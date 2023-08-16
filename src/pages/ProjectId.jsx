@@ -4,10 +4,9 @@ import Navbar from '../components/Navbar';
 import firebase from '../api/FirebaseConfig';
 
 const ProjectId = () => {
-  const { projectId } = useParams(); // Get the projectId from the URL parameter
+  const { projectId } = useParams();
   const [projectData, setProjectData] = useState(null);
 
-  // Fetch project data from Firestore based on the projectId
   useEffect(() => {
     const fetchProjectData = async () => {
       try {
@@ -29,24 +28,41 @@ const ProjectId = () => {
   return (
     <div>
       <Navbar />
-      <div className="container mx-auto mt-8 px-4 text-black font-semibold">
+      <div className="container mx-auto mt-8 mb-8 px-4 text-purple-700 font-semibold">
         {projectData ? (
           <div>
-            <h1 className="text-2xl font-semibold mb-4 text-center text-white">{projectData.title}</h1>
-            <img src={projectData.imageURL} alt={projectData.title} className="w-full h-auto object-cover mb-4 rounded cursor-pointer" />
-            <div className='text-white text-center text-2xl font-semibold my-4'><h2>KEY FEATURES</h2></div>
-            <div className="flex">
-              <div className="w-1/2 pr-2">
-                <img src={projectData.smallimgURL} alt={projectData.title} className="w-full h-auto object-cover rounded cursor-pointer" />
+            <h1 className="text-2xl font-semibold mb-4 text-center bg-transparent">{projectData.title}</h1>
+            <img src={projectData.imageURL} alt={projectData.title} className="w-full h-auto object-cover mb-4 rounded" />
+            <div className='text-gray-500 text-center text-2xl font-semibold my-4'><h2>KEY FEATURES</h2></div>
+            
+            {/* Reordered content for mobile view */}
+            <div className="flex flex-col-reverse md:flex-row-reverse gap-8">
+              <div className="w-full md:w-1/2 md:pr-2 order-last md:order-first">
+                <img
+                  src={projectData.smallimgURL}
+                  alt={projectData.title}
+                  className="w-full h-auto object-cover rounded mb-4 md:mb-0"
+                />
               </div>
-              <p className="w-1/2 p-2 rounded text-gray-500 whitespace-pre-line">{projectData.description}</p>
+              <p className="w-full md:w-1/2 p-2 rounded text-gray-500 whitespace-pre-line max-w-prose">
+                {projectData.description}
+              </p>
             </div>
+            
             <div className='border border-t border-[2px] my-8'></div>
-            <div className="flex">
-              <p className="w-1/2 p-2 rounded text-gray-500 whitespace-pre-line">{projectData.extraDescription}</p>
-              <div className="w-1/2 pr-2">
-                <img src={projectData.extraSmallimgURL} alt={projectData.title} className="w-full h-auto object-cover rounded cursor-pointer" />
+
+            {/* Reordered content for mobile view */}
+            <div className="flex flex-col-reverse md:flex-row gap-8">
+              <div className="w-full md:w-1/2 md:pr-2 order-last md:order-first">
+                <img
+                  src={projectData.extraSmallimgURL}
+                  alt={projectData.title}
+                  className="w-full h-auto object-cover rounded mb-4 md:mb-0"
+                />
               </div>
+              <p className="w-full md:w-1/2 p-2 rounded text-gray-500 whitespace-pre-line max-w-prose">
+                {projectData.extraDescription}
+              </p>
             </div>
           </div>
         ) : (
