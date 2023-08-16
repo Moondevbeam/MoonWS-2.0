@@ -222,7 +222,7 @@ const PreviewPage = () => {
             </div>
           </div>
         ) : (
-          <p>Loading project data...</p>
+          <p>Loading project data</p>
         )}
       </div>
     </div>
