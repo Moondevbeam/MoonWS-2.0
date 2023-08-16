@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import { useAuth } from '../api/AuthContext';
 import firebase from '../api/FirebaseConfig';
 
 const PreviewPage = () => {
   const { projectId } = useParams();
+  // eslint-disable-next-line
+  const { user } = useAuth();
   const [projectData, setProjectData] = useState(null);
   const [editedTitle, setEditedTitle] = useState('');
   const [editedImageURL, setEditedImageURL] = useState('');
@@ -47,6 +50,7 @@ const PreviewPage = () => {
 
     return () => unsubscribe();
   }, [projectId, navigate]);
+
 
   const handleSaveChanges = async () => {
     try {
@@ -127,23 +131,20 @@ const PreviewPage = () => {
               className="text-2xl font-semibold mb-4 w-full px-2 py-1 border rounded"
             />
             <div className="relative">
-              <img
-                src={editedImageURL}
-                alt={editedTitle}
-                className="w-full h-auto object-cover mb-4 rounded cursor-pointer"
-                onClick={() => document.getElementById('fileInput').click()}
-              />
-              <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-75 cursor-pointer">
-                <label htmlFor="fileInput" className="text-white text-lg cursor-pointer">
-                  <i className="fas fa-camera"></i> Change Image
-                </label>
-              </div>
+              <label htmlFor="fileInput" className="cursor-pointer">
+                <img
+                  src={editedImageURL}
+                  alt={editedTitle}
+                  className="w-full h-auto object-cover mb-4 rounded"
+                />
+              </label>
               <input
                 type="file"
                 accept="image/*"
                 onChange={(e) => handleImageChange(e.target.files[0])}
-                style={{ display: 'none' }}
+                className="hidden"
                 id="fileInput"
+                placeholder=''
               />
             </div>
             <div className='text-white text-center text-2xl font-semibold my-4'><h1>KEY FEATURES</h1></div>
@@ -156,47 +157,43 @@ const PreviewPage = () => {
                 placeholder="Enter project description"
               />
               <div className="w-1/2 mx-2">
-                <img
-                  src={editedSmallImageURL}
-                  alt={editedTitle}
-                  className="w-full h-auto object-cover rounded cursor-pointer"
-                  onClick={() => document.getElementById('smallFileInput').click()}
-                />
-                <div className="absolute top-0 right-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-75 cursor-pointer">
-                  <label htmlFor="smallFileInput" className="text-white text-lg cursor-pointer">
-                    Change Image
+                <div className="relative">
+                  <label htmlFor="smallFileInput" className="cursor-pointer">
+                    <img
+                      src={editedSmallImageURL}
+                      alt={editedTitle}
+                      className="w-full h-auto object-cover rounded"
+                    />
                   </label>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => handleSmallImageChange(e.target.files[0])}
+                    className="hidden"
+                    id="smallFileInput"
+                  />
                 </div>
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={(e) => handleSmallImageChange(e.target.files[0])}
-                  style={{ display: 'none' }}
-                  id="smallFileInput"
-                />
               </div>
             </div>
             <div className='border border-t border-[2px] my-8'></div>
             <div className="flex">
               <div className="w-1/2 pr-2">
-                <img
-                  src={editedExtraSmallImageURL}
-                  alt={editedTitle}
-                  className="w-full h-auto object-cover rounded cursor-pointer"
-                  onClick={() => document.getElementById('extraSmallFileInput').click()}
-                />
-                <div className="absolute top-0 right-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-75 cursor-pointer">
-                  <label htmlFor="extraSmallFileInput" className="text-white text-lg cursor-pointer">
-                    Change Image
+                <div className="relative">
+                  <label htmlFor="extraSmallFileInput" className="cursor-pointer">
+                    <img
+                      src={editedExtraSmallImageURL}
+                      alt={editedTitle}
+                      className="w-full h-auto object-cover rounded"
+                    />
                   </label>
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => handleExtraImageChange(e.target.files[0])}
+                    className="hidden"
+                    id="extraSmallFileInput"
+                  />
                 </div>
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={(e) => handleExtraImageChange(e.target.files[0])}
-                  style={{ display: 'none' }}
-                  id="extraSmallFileInput"
-                />
               </div>
               <textarea
                 value={editedExtraDescription}
@@ -222,7 +219,7 @@ const PreviewPage = () => {
             </div>
           </div>
         ) : (
-          <p>Loading project data</p>
+          <p>Loading project data...</p>
         )}
       </div>
     </div>
