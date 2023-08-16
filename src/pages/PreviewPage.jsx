@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import { useAuth } from '../api/AuthContext';
 import firebase from '../api/FirebaseConfig';
 
 const PreviewPage = () => {
   const { projectId } = useParams();
-  // eslint-disable-next-line
-  const { user } = useAuth();
   const [projectData, setProjectData] = useState(null);
   const [editedTitle, setEditedTitle] = useState('');
   const [editedImageURL, setEditedImageURL] = useState('');
@@ -17,7 +14,6 @@ const PreviewPage = () => {
   const [editedExtraSmallImageURL, setEditedExtraSmallImageURL] = useState('');
   const navigate = useNavigate();
 
-  // Fetch project data from Firestore based on the projectId
   useEffect(() => {
     const fetchProjectData = async () => {
       try {
@@ -27,10 +23,10 @@ const PreviewPage = () => {
           setProjectData(project);
           setEditedTitle(project.title);
           setEditedImageURL(project.imageURL);
-          setEditedDescription(project.description); // Set the description from Firestore
-          setEditedSmallImageURL(project.smallimgURL); // Set the small image from Firestore
-          setEditedExtraDescription(project.extraDescription); // Set the extra description from Firestore
-          setEditedExtraSmallImageURL(project.extraSmallimgURL); // Set the extra small image from Firestore
+          setEditedDescription(project.description);
+          setEditedSmallImageURL(project.smallimgURL);
+          setEditedExtraDescription(project.extraDescription);
+          setEditedExtraSmallImageURL(project.extraSmallimgURL);
         } else {
           console.log('Project not found');
         }
@@ -39,12 +35,21 @@ const PreviewPage = () => {
       }
     };
 
-    fetchProjectData();
-  }, [projectId]);
+    const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        // User is authenticated, fetch project data
+        fetchProjectData();
+      } else {
+        // User is not authenticated, navigate to /admin
+        navigate('/admin');
+      }
+    });
+
+    return () => unsubscribe();
+  }, [projectId, navigate]);
 
   const handleSaveChanges = async () => {
     try {
-      // Update project data in Firestore
       await firebase.firestore().collection('projects').doc(projectId).update({
         title: editedTitle,
         imageURL: editedImageURL,
@@ -63,14 +68,9 @@ const PreviewPage = () => {
   const handleImageChange = async (file) => {
     if (file) {
       try {
-        // Upload the selected image to Firebase Storage
         const imageRef = firebase.storage().ref().child(file.name);
         await imageRef.put(file);
-
-        // Get the URL of the uploaded image
         const imageURL = await imageRef.getDownloadURL();
-
-        // Update the edited image URL in state
         setEditedImageURL(imageURL);
       } catch (error) {
         console.error(error);
@@ -106,11 +106,9 @@ const PreviewPage = () => {
 
   const handleDeleteProject = async () => {
     try {
-      // Delete project data from Firestore
       await firebase.firestore().collection('projects').doc(projectId).delete();
-
       console.log('Project deleted successfully');
-      navigate('/admin'); // Use navigate to redirect
+      navigate('/admin');
     } catch (error) {
       console.error(error);
     }
