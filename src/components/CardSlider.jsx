@@ -23,10 +23,10 @@ const CardSlider = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4 my-4 mx-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-4 my-8 mx-4">
       {projects.map((project) => (
         <Link key={project.id} to={`/projects/${project.id}`}>
-          <div className="bg-[#8000ff] bg-opacity-[0.7] rounded-md shadow-md cursor-pointer">
+          <div className="bg-[#8000ff] bg-opacity-[0.7] rounded-md hover:shadow-md hover:shadow-purple-700 cursor-pointer transform hover:scale-105">
             <img src={project.imageURL} alt={project.title} className="w-full h-64 object-cover mb-2 rounded-t" />
             <div className="p-4">
               <h3 className="text-md text-white text-center mb-1 font-semibold text-gray-800">{project.title}</h3>
