@@ -1,5 +1,5 @@
 import React from 'react';
-import ThanksBG from '../assets/images/circle-blues.png';
+import ThanksBG from '../assets/images/circle-blues.webp';
 
 const Thanks = () => {
   return (

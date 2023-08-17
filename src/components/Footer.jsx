@@ -3,7 +3,7 @@ import logo from '../assets/images/1682858017524.png'
 import {Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <footer className='md:fixed md:bottom-0'>
+    <footer className='mt-auto'>
       <div className="container mx-auto py-6 px-4">
         <div className="grid gap-2 md:grid-cols-6 grid-cols-2">
           <div className="mb-4 flex flex-col items-center col-span-2 md:col-span-1 md:mr-auto">

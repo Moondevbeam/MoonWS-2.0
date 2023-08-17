@@ -23,7 +23,8 @@ const CardSlider = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-4 my-8 mx-4">
+    <div className='min-h-screen mt-8 md:mb-8 mb-16'>
+    <div className="grid grid-cols-1 xl:grid-cols-5 md:grid-cols-2 lg:grid-cols-4 gap-8 mx-4">
       {projects.map((project) => (
         <Link key={project.id} to={`/projects/${project.id}`}>
           <div className="bg-[#8000ff] bg-opacity-[0.7] rounded-md hover:shadow-md hover:shadow-purple-700 cursor-pointer transform hover:scale-105">
@@ -34,6 +35,7 @@ const CardSlider = () => {
           </div>
         </Link>
       ))}
+    </div>
     </div>
   );
 };

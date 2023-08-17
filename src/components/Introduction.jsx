@@ -1,5 +1,5 @@
 import React from 'react';
-import image1 from '../assets/images/andras-vas-Bd7gNnWJBkU-unsplash.jpg';
+import image1 from '../assets/images/landingimage.webp';
 import logo from '../assets/images/1682858017524.png'
 
 function Introduction() {
